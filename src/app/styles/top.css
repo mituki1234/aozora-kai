@@ -1,0 +1,186 @@
+/* 無印良品風シンプルでおしゃれなデザイン */
+:root {
+    --main-bg-color: #f7f6f2;
+    --main-text-color: #4a4a4a;
+    --secondary-bg-color: #ffffff;
+    --border-color: #e0ddd5;
+    --accent-color: #7d7d7d;
+    --hover-color: #b2ada1;
+    --button-color: #8c857b;
+}
+
+body {
+    font-family: 'Noto Sans JP', 'Hiragino Sans', sans-serif;
+    color: var(--main-text-color);
+    background-color: var(--main-bg-color);
+    line-height: 1.8;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+
+
+/* メインコンテンツ */
+.main {
+    padding: 60px 0;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 80px;
+    padding: 80px 20px;
+    background-color: var(--secondary-bg-color);
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 25px;
+    font-weight: 500;
+    letter-spacing: 3px;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    color: var(--accent-color);
+    max-width: 600px;
+    margin: 0 auto;
+    letter-spacing: 0.5px;
+}
+
+/* 検索フォーム */
+.search {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 80px;
+    padding: 0 20px;
+}
+
+.search input {
+    padding: 15px 20px;
+    width: 400px;
+    border: 1px solid var(--border-color);
+    border-right: none;
+    background-color: var(--secondary-bg-color);
+    font-size: 1rem;
+}
+
+.search input:focus {
+    outline: none;
+    border-color: var(--hover-color);
+}
+
+.search button {
+    padding: 15px 30px;
+    background-color: var(--button-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    transition: background-color 0.3s;
+}
+
+.search button:hover {
+    background-color: var(--hover-color);
+}
+
+/* カード */
+.about {
+    margin-bottom: 80px;
+    padding: 0 60px;
+}
+
+.card {
+    background-color: var(--secondary-bg-color);
+    padding: 50px 60px;
+    border-radius: 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.card h2 {
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    font-size: 1.8rem;
+    color: var(--main-text-color);
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.card p {
+    margin-bottom: 20px;
+    line-height: 1.8;
+    color: var(--accent-color);
+}
+
+/* フッター */
+.footer {
+    background-color: var(--secondary-bg-color);
+    padding: 50px 0;
+    border-top: 1px solid var(--border-color);
+}
+
+.footer-content {
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--accent-color);
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-content p {
+    margin: 10px 0;
+    letter-spacing: 0.5px;
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 900px) {
+    .header {
+        padding: 20px 30px;
+    }
+
+    .menu {
+        gap: 20px;
+    }
+
+    .hero {
+        padding: 60px 20px;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .about {
+        padding: 0 30px;
+    }
+
+    .card {
+        padding: 40px 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .menu {
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .search input {
+        width: 60%;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+}
